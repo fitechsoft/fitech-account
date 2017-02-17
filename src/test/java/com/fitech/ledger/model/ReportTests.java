@@ -80,8 +80,7 @@ public class ReportTests {
         }catch(RowInstanceGenerationException e){
             e.printStackTrace();
         }
-
-
+        
         assertThat(report.getRows()).isNotNull();
     }
 
