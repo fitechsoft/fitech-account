@@ -3,6 +3,7 @@ package com.fitech.account.model;
 import com.fitech.base.model.FTNamedObject;
 import com.fitech.base.model.FTObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,6 +27,8 @@ public class FAReport extends FTNamedObject {
 
 
     public List<FARow> getRows() {
+        if (null == this.rows)
+            this.rows = new ArrayList<FARow>();
         return rows;
     }
 

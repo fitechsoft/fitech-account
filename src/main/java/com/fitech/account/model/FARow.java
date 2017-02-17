@@ -4,6 +4,7 @@ import com.fitech.account.model.field.FAField;
 import com.fitech.base.model.FTNamedObject;
 import com.fitech.base.model.FTObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,6 +25,9 @@ public class FARow extends FTNamedObject{
 
 
     public void addField(FAField field){
+        if (null == this.fields)
+            this.fields = new ArrayList<FAField>();
+
         this.fields.add(field);
     }
 
