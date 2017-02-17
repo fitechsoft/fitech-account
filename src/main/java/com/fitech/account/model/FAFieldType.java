@@ -1,5 +1,6 @@
 package com.fitech.account.model;
 
+import com.fitech.account.model.field.FAField;
 import com.fitech.base.model.FTObject;
 
 /**

@@ -20,6 +20,9 @@ public class FARowTemplate extends FTObject {
         this.typedFields = typedFields;
     }
 
+    public void addTypedFileds(FAFieldType typedField){
+        this.typedFields.add(typedField);
+    }
 
     public FARow generateRowInstance(){
 
