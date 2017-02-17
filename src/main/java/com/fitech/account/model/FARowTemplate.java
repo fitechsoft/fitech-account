@@ -1,6 +1,7 @@
 package com.fitech.account.model;
 
-import com.fitech.base.model.FTObject;
+import com.fitech.account.model.field.FAField;
+import com.fitech.base.model.FTNamedObject;
 
 import java.util.List;
 
@@ -8,30 +9,35 @@ import java.util.List;
 /**
  * Created by chun on 2017/2/16.
  */
-public class FARowTemplate extends FTObject {
+public class FARowTemplate extends FTNamedObject {
 
-    private List<FAFieldType> typedFields;
+    private List<FAField> fields;
 
-    public List<FAFieldType> getTypedFields() {
-        return typedFields;
+    public List<FAField> getFields() {
+        return fields;
     }
 
-    public void setTypedFields(List<FAFieldType> typedFields) {
-        this.typedFields = typedFields;
+    public void setFields(List<FAField> fields) {
+        this.fields = fields;
     }
 
-    public void addTypedFileds(FAFieldType typedField){
-        this.typedFields.add(typedField);
+    public void addFiled(FAField field) {
+        this.fields.add(field);
     }
 
-    public FARow generateRowInstance(){
+    public FARow generateRowInstance() throws RowInstanceGenerationException {
 
         //TODO
 
         FARow newRow = new FARow(); //TODO: Should use factory pattern
 
-        for (FAFieldType fieldType: typedFields){
-            newRow.addField(fieldType.generateFieldInstance());
+        try {
+            for (FAField field : fields) {
+
+                newRow.addField(field.clone());
+            }
+        } catch (CloneNotSupportedException e) {
+            throw new RowInstanceGenerationException();
         }
 
         return newRow;

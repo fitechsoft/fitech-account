@@ -1,6 +1,7 @@
 package com.fitech.account.model;
 
 import com.fitech.account.model.field.FAField;
+import com.fitech.base.model.FTNamedObject;
 import com.fitech.base.model.FTObject;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 /**
  * Created by chun on 2017/2/16.
  */
-public class FARow extends FTObject{
+public class FARow extends FTNamedObject{
 
     private List<FAField> fields;
 

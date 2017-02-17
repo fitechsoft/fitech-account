@@ -1,26 +1,17 @@
 package com.fitech.account.model.field;
 
+import com.fitech.base.model.FTNamedObject;
 import com.fitech.base.model.FTObject;
 
 /**
  * Created by chun on 2017/2/16.
  */
-public abstract class FAField<T> extends FTObject implements Cloneable{
+public abstract class FAField<T> extends FTNamedObject implements Cloneable{
 
-    private String fieldName;
     private T fieldValue;
     private FAFieldSqlType sqlType;
-    private String description;
     private boolean visible;
     private boolean searchable;
-
-    public String getFieldName() {
-        return fieldName;
-    }
-
-    public void setFieldName(String fieldName) {
-        this.fieldName = fieldName;
-    }
 
 
     public T getFieldValue() {
@@ -40,13 +31,6 @@ public abstract class FAField<T> extends FTObject implements Cloneable{
         this.sqlType = sqlType;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public boolean isVisible() {
         return visible;
@@ -67,7 +51,7 @@ public abstract class FAField<T> extends FTObject implements Cloneable{
     public abstract boolean validate();
 
     @Override
-    protected FAField<T> clone() throws CloneNotSupportedException {
+    public FAField<T> clone() throws CloneNotSupportedException {
         FAField<T> newField = (FAField<T>) super.clone();
 
 

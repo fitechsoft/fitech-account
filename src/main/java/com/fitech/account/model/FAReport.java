@@ -1,5 +1,6 @@
 package com.fitech.account.model;
 
+import com.fitech.base.model.FTNamedObject;
 import com.fitech.base.model.FTObject;
 
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 /**
  * Created by chun on 2017/2/16.
  */
-public abstract class FAReport extends FTObject {
+public class FAReport extends FTNamedObject {
 
     private FAReportTemplate template;
 

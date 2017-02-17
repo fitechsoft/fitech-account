@@ -1,26 +1,13 @@
 package com.fitech.account.model;
 
-import com.fitech.base.model.FTObject;
-
-import java.util.List;
+import com.fitech.base.model.FTNamedObject;
 
 /**
  * Created by chun on 2017/2/16.
  */
-public class FAReportTemplate extends FTObject{
-
-    public String getTemplateName() {
-        return templateName;
-    }
-
-    public void setTemplateName(String templateName) {
-        this.templateName = templateName;
-    }
-
-    private String templateName;
+public class FAReportTemplate extends FTNamedObject {
 
     private FARowTemplate rowTemplate;
-
 
     public FARowTemplate getRowTemplate() {
         return rowTemplate;
@@ -30,5 +17,12 @@ public class FAReportTemplate extends FTObject{
         this.rowTemplate = rowTemplate;
     }
 
+    private FAReport report;
 
+
+    public FAReport generateReport() {
+        this.report = new FAReport();
+        this.report.setTemplate(this);
+        return this.report;
+    }
 }
