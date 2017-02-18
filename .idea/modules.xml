@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/fitech-account.iml" filepath="$PROJECT_DIR$/fitech-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fitech-account-client/fitech-account-client.iml" filepath="$PROJECT_DIR$/fitech-account-client/fitech-account-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fitech-account-server/fitech-account-server.iml" filepath="$PROJECT_DIR$/fitech-account-server/fitech-account-server.iml" />
     </modules>
   </component>
 </project>

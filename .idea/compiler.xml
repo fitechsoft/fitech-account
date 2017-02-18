@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="fitech-account" />
+        <module name="fitech-account-client" />
+        <module name="fitech-account-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="fitech-account" target="1.6" />
+      <module name="fitech-account-client" target="1.6" />
+      <module name="fitech-account-server" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
