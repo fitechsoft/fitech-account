@@ -1,6 +1,6 @@
 package com.fitech.account.model;
 
-import com.fitech.account.model.field.FAField;
+import com.fitech.account.model.field.DataField;
 import com.fitech.base.model.FTNamedObject;
 
 import java.util.ArrayList;
@@ -10,33 +10,33 @@ import java.util.List;
 /**
  * Created by chun on 2017/2/16.
  */
-public class FARowTemplate extends FTNamedObject {
+public class ReportRowTemplate extends FTNamedObject {
 
-    private List<FAField> fields;
+    private List<DataField> fields;
 
-    public List<FAField> getFields() {
+    public List<DataField> getFields() {
         return fields;
     }
 
-    public void setFields(List<FAField> fields) {
+    public void setFields(List<DataField> fields) {
         this.fields = fields;
     }
 
-    public void addFiled(FAField field) {
+    public void addFiled(DataField field) {
         if (null == this.fields)
-            this.fields = new ArrayList<FAField>();
+            this.fields = new ArrayList<DataField>();
 
         this.fields.add(field);
     }
 
-    public FARow generateRowInstance() throws RowInstanceGenerationException {
+    public ReportRow generateRowInstance() throws RowInstanceGenerationException {
 
         //TODO
 
-        FARow newRow = new FARow(); //TODO: Should use factory pattern
+        ReportRow newRow = new ReportRow(); //TODO: Should use factory pattern
 
         try {
-            for (FAField field : fields) {
+            for (DataField field : fields) {
 
                 newRow.addField(field.clone());
             }

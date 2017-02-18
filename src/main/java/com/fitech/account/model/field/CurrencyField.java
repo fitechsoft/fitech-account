@@ -5,7 +5,7 @@ import java.text.NumberFormat;
 /**
  * Created by chun on 2017/2/17.
  */
-public class FACurrencyField extends  FADoubleField {
+public class CurrencyField extends DoubleField {
 
     public static final Double BOUND_UPPER = 10000000000.0;
     public static final Double BOUND_LOWER = -10000000000.0;

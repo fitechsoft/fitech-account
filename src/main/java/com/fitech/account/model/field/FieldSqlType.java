@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by chun on 2017/2/17.
  */
-public enum FAFieldSqlType {
+public enum FieldSqlType {
 
     DATE("DATE"),
     VARCHAR("VARCHAR"),
@@ -14,7 +14,7 @@ public enum FAFieldSqlType {
 
     private String typeString;
 
-    FAFieldSqlType(String typeString) {
+    FieldSqlType(String typeString) {
         this.typeString = typeString;
     }
 

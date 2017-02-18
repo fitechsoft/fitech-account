@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 /**
  * Created by chun on 2017/2/17.
  */
-public class FAIDField extends FAStringField {
+public class IDNumberField extends StringField {
 
     @Override
     public boolean validate() {

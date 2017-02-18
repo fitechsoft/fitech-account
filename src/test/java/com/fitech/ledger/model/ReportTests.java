@@ -19,37 +19,37 @@ public class ReportTests {
     @Test
     public void shouldGenerateExpectedReportTest() {
 
-        FAReportTemplate reportTplDepositStock = new FALedgerReportTemplate();
+        ReportTemplate reportTplDepositStock = new LedgerReportTemplate();
         reportTplDepositStock.setName("RPT_DEPOSIT_STOCK");
         reportTplDepositStock.setDescription("存款余额表");
 
 
-        FARowTemplate rowTplDepositStock = new FALedgerRowTemplate();
+        ReportRowTemplate rowTplDepositStock = new LedgerRowTemplate();
         rowTplDepositStock.setName("ROW_DEPOSIT_STOCK");
         rowTplDepositStock.setDescription("存款余额行");
 
 
-        FAIDField fieldID = new FAIDField();
+        IDNumberField fieldID = new IDNumberField();
         fieldID.setName("IDTYPE_ID");
         fieldID.setDescription("个人证件号码");
         fieldID.setFieldValue("102938374747887388");
 
         assertThat(!fieldID.validate());
 
-        FADateField fieldLastOp = new FAGenericDateField();
+        DateField fieldLastOp = new GenericDateField();
         fieldLastOp.setName("LASTBUS_DATE");
         fieldLastOp.setDescription("最后一次操作时间");
         fieldLastOp.setFieldValue(new Date());
 
         assertThat(fieldLastOp.validate());
 
-        FACurrencyField fieldBalance = new FACurrencyField();
+        CurrencyField fieldBalance = new CurrencyField();
         fieldBalance.setName("DEP_BALANCE");
         fieldBalance.setDescription("存款余额");
         fieldBalance.setFieldValue(199838.0);
         System.out.println(fieldBalance.getFormatted());
 
-        FAStringField fieldSubName = new FAGenericStringField();
+        StringField fieldSubName = new GenericStringField();
         fieldSubName.setName("DEP_SUBJECTNAME");
         fieldSubName.setDescription("存款主体名称");
 
@@ -61,14 +61,14 @@ public class ReportTests {
         rowTplDepositStock.addFiled(fieldBalance);
         rowTplDepositStock.addFiled(fieldSubName);
 
-        FAReport report = null;
+        Report report = null;
 
         reportTplDepositStock.setRowTemplate(rowTplDepositStock);
 
         try{
-            FARow row1 = reportTplDepositStock.getRowTemplate().generateRowInstance();
-            FARow row2 = reportTplDepositStock.getRowTemplate().generateRowInstance();
-            FARow row3 = reportTplDepositStock.getRowTemplate().generateRowInstance();
+            ReportRow row1 = reportTplDepositStock.getRowTemplate().generateRowInstance();
+            ReportRow row2 = reportTplDepositStock.getRowTemplate().generateRowInstance();
+            ReportRow row3 = reportTplDepositStock.getRowTemplate().generateRowInstance();
 
             report = reportTplDepositStock.generateReport();
 
@@ -80,7 +80,7 @@ public class ReportTests {
         }catch(RowInstanceGenerationException e){
             e.printStackTrace();
         }
-        
+
         assertThat(report.getRows()).isNotNull();
     }
 

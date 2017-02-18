@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by chun on 2017/2/17.
  */
-public class FABirthdayField extends FADateField {
+public class BirthdayField extends DateField {
 
     @Override
     public boolean validate() {
