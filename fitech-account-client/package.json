@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.6",
+    "gulp-uglify": "^1.5.3",
+    "gulp-less": "^3.1.0"
+  },
+  "name": "fitech-account-client",
+  "version": "1.0.0",
+  "description": "Fitech Account AngularJS client application",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start test/resources/karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fitechsoft/fitech-account-client.git"
+  },
+  "author": "Chun Cao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fitechsoft/fitech-account-client/issues"
+  },
+  "homepage": "https://github.com/fitechsoft/fitech-account-client#readme"
+}

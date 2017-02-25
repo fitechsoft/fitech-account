@@ -1,0 +1,25 @@
+{
+  "name": "fitech-account-client",
+  "description": "Fitech Account AngularJS client application",
+  "main": "",
+  "authors": [
+    "Chun Cao <caochun@gmail.com>"
+  ],
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/fitechsoft/fitech-account-client",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8",
+    "bootstrap": "components/bootstrap#~3.3.7",
+    "jquery": "components/jquery#~3.1.0",
+    "angular-ui-router": "ui-router#^0.3.2"
+  }
+}
