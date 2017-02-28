@@ -1,0 +1,12 @@
+actor TemplateAdmin as "Template Admin"
+
+  TemplateAdmin->ReportTemplate: startDefining
+    loop n times
+      TemplateAdmin->FieldFactory: listAllFieldTypes
+      FieldFactory-->TemplateAdmin: allFieldTypes
+      TemplateAdmin->FieldFactory: create specific field instance
+      FieldFactory-->TemplateAdmin: return the field instance
+      TemplateAdmin->ReportTemplate: addField
+      ReportTemplate->RowTemplate: addField
+    end
+  TemplateAdmin->ReportTemplate: endDefining

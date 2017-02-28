@@ -1,0 +1,13 @@
+:User: as User
+:Template Admin: as TemplateAdmin
+:Source DB: as DB
+
+User <|-- TemplateAdmin
+
+TemplateAdmin --> (Define report templates manually)
+TemplateAdmin --> (Extract report templates from existing database schemas)
+DB --> (Extract report templates from existing database schemas)
+User --> (Create a new report from some report template)
+User ---> (Generate a new row in one report and fill in data into it)
+User --> (Import data from existing database into a report)
+DB --> (Import data from existing database into a report)
