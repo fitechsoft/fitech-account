@@ -1,3 +1,4 @@
+@startuml
 package com.fitech.base.model {
   class FBEntity
   class FBSubject
@@ -45,3 +46,4 @@ FAReport "1" --> "0..1" FAReportTemplate : associates >
 FARow "1" --> "1" FARowTemplate : comes from >
 FAReportTemplate "1" *-- "1" FARowTemplate : contains <
 FARowTemplate "1" *-- "many" FAFieldType : contains >
+@enduml

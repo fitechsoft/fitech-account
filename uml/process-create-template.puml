@@ -1,3 +1,4 @@
+@startuml
 actor TemplateAdmin as "Template Admin"
 
 
@@ -10,3 +11,4 @@ RowTemplateFactory-->ReportTemplate: return the row template instance
 ReportTemplate-->ReportTemplateFactory: return the instance
 ReportTemplateFactory-->TemplateAdmin: return the report template instance
 
+@enduml
